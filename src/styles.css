@@ -1,0 +1,129 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+body{
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.fix-footer{
+  bottom: 0;
+  padding-top: 10px;
+  margin-top: 60px;
+  min-height: 60px;
+  border-top: dotted 1px #666;
+}
+
+.dottedtop
+{
+  border-top:dotted 1px #666;
+}
+
+.customnavbar
+{
+  padding-top: -10px;
+  border-top:dotted 1px #666;
+}
+
+.nav-item
+{
+  font-size: large;
+}
+
+.nav-link
+{
+  color: #006600;
+}
+
+.containermain
+{
+  margin: 20px;
+}
+
+.left
+{
+  float: left;
+}
+
+.right
+{
+  float:right;
+}
+
+.textright
+{
+  text-align: right;
+}
+
+.showred
+{
+  border:solid 1px red;
+}
+ .rightlimit
+ {
+   margin-right: 10px;
+ }
+
+ .leftlimit
+ {
+   margin-left: 10px;
+ }
+
+  h1, h2, h3{
+    color:#006600;
+  }
+
+  h1
+  {
+    padding-left:2px;
+    padding-top:3px;
+    font-size:x-large;
+  }
+
+  h2
+  {
+    font-size:large;
+    margin-bottom:1px;
+    font-weight:bolder;
+  }
+
+  h3
+  {
+    font-size:medium;
+    margin-bottom:1px;
+  }
+
+.boxshadow
+{
+	-webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+.boxcommon
+{
+	background-color:#fff;
+	border:solid 1px #cdcdcd;
+	border-radius:10px;
+  margin:3px;
+  padding:13px;
+}
+
+.overlay-box {
+  background-color: #fff;
+  border: 1px solid #666;
+  text-align:center;
+  height: 200px;/*height needs to be set*/
+  width: 550px;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  border-radius: 8px;
+  opacity: 0.8;
+}
+

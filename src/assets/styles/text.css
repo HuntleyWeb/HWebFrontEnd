@@ -1,0 +1,41 @@
+.date
+{
+  font-weight: bold;
+  font-size: larger;
+  color:#666;
+}
+
+h1
+{
+	padding-left:2px;
+	padding-top:3px;
+	font-size:x-large;
+	color:red;
+}
+
+h2
+{
+	font-size:large;
+	color:#009900;
+	margin-bottom:1px;
+	font-weight:bolder;
+}
+
+h3
+{
+	font-size:medium;
+	color:#009900;
+	margin-bottom:1px;
+}
+
+a.inlinelink
+{
+	color:#321890;
+	font-size:inherit;
+	font-style:inherit;
+}
+
+.inlinelink a:hover
+{
+	color:#0f0;
+}
