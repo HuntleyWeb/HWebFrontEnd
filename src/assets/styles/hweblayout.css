@@ -1,0 +1,15 @@
+.popupbottombuttondiv
+{
+  float:right;
+  padding:6px;
+  position:absolute;
+  bottom:0;
+  right:0;
+}
+
+.bottombuttondiv
+{
+  text-align:right;
+  padding:3px;
+}
+
