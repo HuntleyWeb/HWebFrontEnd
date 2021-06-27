@@ -15,21 +15,28 @@ export class ContactComponent implements OnInit {
   sending = false;
   errDetails = '';
   categories = ['Website Work', 'Consultancy Work'];
-  model = new Contact('Jon Smith', 'jon.huntley@hotmail.co.uk', '', 'Test Subject', 'Hello, I want to make a complaint', new Date());
+  model = new Contact('', '', '', '', '', new Date());
   submitted = false;
   successful = false;
+  error = false;
 
   ngOnInit() {
     this.categories.sort();
 
     this.emailService.sending.subscribe(snd => this.sending = snd);
-    this.emailService.messageSuccessful.subscribe(c => this.onSuccess());
+    //this.emailService.messageSuccessful.subscribe(c => this.onSuccess());
+    this.emailService.messageSuccessful.subscribe(success => this.successful = success);
     this.emailService.messagingError.subscribe(err => this.onError(err));
+
+    this.successful = false;
+    this.error = false;
   }
 
   async onSubmit()
   {
     console.log('submitted form');
+    this.successful = false;
+    this.error = false;
     this.submitted = true;
 
     await this.emailService.SendMessage(this.model);
@@ -37,19 +44,11 @@ export class ContactComponent implements OnInit {
     console.log('***');
   }
 
-  onSuccess()
-  {
-
-    console.log("Success!");
-
-    //this.model.Message = '';
-  }
-
-
   onError(error :string)
   {
-
     console.log('Messaging Error :' + error);
+    this.successful = false;
+    this.error = true;
   }
 
   resetForm()
@@ -58,6 +57,14 @@ export class ContactComponent implements OnInit {
     this.model.EmailAddress = '';
     this.model.Subject = '';
     this.model.Message = '';
+
+    this.successful = false;
+  }
+
+  hideMe(div)
+  {
+    var box = document.getElementById(div);
+
+    box.style.display = "none";
   }
 }
-

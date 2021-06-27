@@ -39,3 +39,9 @@ a.inlinelink
 {
 	color:#0f0;
 }
+
+.zerotop
+{
+  padding-top:0px;
+  margin-top:0px;
+}

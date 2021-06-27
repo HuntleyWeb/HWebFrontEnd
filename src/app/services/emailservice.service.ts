@@ -52,6 +52,8 @@ export class EmailService {
       this.sendingEmail.next(false);
       this.messageSent.next(true);
 
+      //this.onError.next("Oh dear!");
+
     }).catch((error) => {
       this.handleHttpError('SendMessage()', error);
     });
