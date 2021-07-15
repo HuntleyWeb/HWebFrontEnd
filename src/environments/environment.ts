@@ -8,7 +8,8 @@ export const environment = {
   mailServerUser: 'jon.huntley@huntleyweb.co.uk',
   contactUsTarget: 'jon.huntley@hotmail.co.uk',
   notificationList: '',
-  localDB: 'Database=HuntleyWeb;Server=sql7.hostinguk.net;Uid=hwebuser;Password=pa55word'
+  localDB: 'Database=HuntleyWeb;Server=sql7.hostinguk.net;Uid=hwebuser;Password=pa55word',
+  vers:'1.0.0.2'
 };
 
 /*

@@ -3,5 +3,6 @@ export const environment = {
   mailApiEndpoint: 'https://hwebapi.azurewebsites.net/api/Email/sendmessage',
   mailServerUser: 'jon.huntley@huntleyweb.co.uk',
   contactUsTarget: 'jon.huntley@hotmail.co.uk',
-  notificationList: ''
+  notificationList: '',
+  vers:'1.0.0.2'
 };
