@@ -5,8 +5,10 @@ import { AboutComponent } from './content/about/about.component';
 import { ContactComponent } from './content/contact/contact.component';
 import { LinksComponent } from './content/links/links/links.component';
 import { WebsitesComponent } from './content/web/websites/websites.component';
+import { LoginComponent } from './content/login/login/login.component';
 
 const routes: Routes = [
+  { path: 'login', component:LoginComponent },
   { path : 'home', component: HomeComponent },
   { path : 'about', component: AboutComponent },
   { path : 'contact', component: ContactComponent },
