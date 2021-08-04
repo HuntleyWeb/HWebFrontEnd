@@ -9,10 +9,14 @@
         <a routerLink="/contact" routerLinkActive="active" class="nav-item nav-link" href="#">Contact</a>
         <a class="nav-item nav-link disabled" href="#">Sample Shop Site</a>
         <a routerLink="/websites" routerLinkActive="active" class="nav-item nav-link" href="#">Websites</a>
-        <a routerLink="/links" routerLinkActive="active" class="nav-item nav-link" href="#">Links</a>
+
+        <a routerLink="/profile" routerLinkActive="active" class="nav-item nav-link" href="#">My Profile</a>
       </div>
   </div>
-  <div>
-    <a routerLink="/login" routerLinkActive="active" class="nav-item nav-link" href="#">login</a>
+  <div *ngIf="LoggedIn; else isLogOut">
+    <a routerLink="/logout" routerLinkActive="active" class="nav-item nav-link" href="#">logout</a>
   </div>
+  <ng-template #isLogOut>
+    <a class="nav-link" routerLink="/login">Login</a>
+  </ng-template>
 </nav>

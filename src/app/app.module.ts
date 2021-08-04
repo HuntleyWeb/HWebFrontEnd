@@ -11,7 +11,9 @@ import { HomeComponent } from './content/home/home.component';
 import { LinksComponent } from './content/links/links/links.component';
 import { WebsitesComponent } from './content/web/websites/websites.component';
 import { LoginComponent } from './content/login/login/login.component';
-
+import { ProfileComponent } from './content/secure/profile/profile.component';
+import { LogoutComponent } from './content/logout/logout.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,13 +23,16 @@ import { LoginComponent } from './content/login/login/login.component';
     HomeComponent,
     LinksComponent,
     WebsitesComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
   ],

@@ -5,7 +5,6 @@ import { environment } from 'src/environments/environment';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
-
 })
 
 export class AppComponent {
@@ -15,6 +14,11 @@ export class AppComponent {
   anio: number = new Date().getFullYear();
   day = this.getWeekday();
   version = environment.vers;
+
+  ngOnInit() {
+    //let storeData = localStorage.getItem("isUserLoggedIn");
+    console.log("App-Component INIT");
+ }
 
   getWeekday() {
     let weekDay = '';

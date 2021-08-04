@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginUser } from 'src/app/models/login-user';
-import { FormGroup, FormControl } from '@angular/forms';
 import { UserService } from 'src/app/services/userservice.service';
 import { Router } from '@angular/router';
 
@@ -31,11 +30,22 @@ export class LoginComponent implements OnInit {
 
     this.working = true;
 
+    this.userService.login(this.model.LoginEmailAddress, this.model.Password)
+        .subscribe( response => {
+          console.log("Login Response:" + response);
+
+          this.successful = response;
+
+          if (this.successful)
+            this.router.navigate(['/profile']);
+          else
+            this.router.navigate(['/home']);
+        });
+
   }
 
   resetForm()
   {
-    this.model.Name = '';
     this.model.LoginEmailAddress = '';
     this.model.Password = '';
 
