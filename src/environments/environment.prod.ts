@@ -5,5 +5,5 @@ export const environment = {
   contactUsTarget: 'jon.huntley@hotmail.co.uk',
   notificationList: '',
   dated: '20-12-2021',
-  vers: '1.0.0.3'
+  vers: '1.0.0.4'
 };
