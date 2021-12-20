@@ -26,8 +26,7 @@ export class EmailService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public async SendMessage(contactModel: Contact)
-  {
+  public async SendMessage(contactModel: Contact) {
     this.sendingEmail.next(true);
     this.messageSent.next(false);
 
@@ -52,7 +51,7 @@ export class EmailService {
       this.sendingEmail.next(false);
       this.messageSent.next(true);
 
-      //this.onError.next("Oh dear!");
+      // this.onError.next("Oh dear!");
 
     }).catch((error) => {
       this.handleHttpError('SendMessage()', error);
@@ -81,17 +80,15 @@ export class EmailService {
     });
     */
 
-    //return promise;
+    // return promise;
   }
 
-  handleHttpError(method: string, error: HttpErrorResponse)
-  {
+  handleHttpError(method: string, error: HttpErrorResponse)  {
     console.log('Method:' + method);
     console.log('Status Code:' + error.status);
     console.log('Details:' + error.message);
 
-    if (error.status === 404)
-    {
+    if (error.status === 404)    {
       console.log('Service Not Available!');
     }
 
@@ -99,12 +96,11 @@ export class EmailService {
     this.onError.next(error.message);
   }
 
-  createPayload(contactModel: Contact)
-  {
+  createPayload(contactModel: Contact)  {
     let content: string = 'New Message From: <b>' + contactModel.Name + '</b><br>';
 
     content += 'Message Category:' + contactModel.Category + '<br>';
-    content += '<p>' + contactModel.Message + '</p><br>End of Message....'
+    content += '<p>' + contactModel.Message + '</p><br>End of Message....';
 
     const subject1 = contactModel.Category + ' ' + contactModel.Subject + ' From:' + contactModel.Name;
 

@@ -9,7 +9,7 @@ export const environment = {
   contactUsTarget: 'jon.huntley@hotmail.co.uk',
   notificationList: '',
   localDB: 'Database=HuntleyWeb;Server=sql7.hostinguk.net;Uid=hwebuser;Password=pa55word',
-  vers:'1.0.0.3'
+  vers: '1.0.0.3'
 };
 
 /*
