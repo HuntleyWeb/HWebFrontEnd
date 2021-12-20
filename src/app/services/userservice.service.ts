@@ -15,7 +15,7 @@ export class UserService {
   private loggedIn = new BehaviorSubject(false);
   isLoggedIn = this.loggedIn.asObservable();
 
-  login (userName: string, password : string): Observable {
+  login (userName: string, password : string): Observable <any>{
 
     console.log(userName);
     console.log(password);

@@ -4,5 +4,5 @@ export const environment = {
   mailServerUser: 'jon.huntley@huntleyweb.co.uk',
   contactUsTarget: 'jon.huntley@hotmail.co.uk',
   notificationList: '',
-  vers:'1.0.0.2'
+  vers:'1.0.0.3'
 };
